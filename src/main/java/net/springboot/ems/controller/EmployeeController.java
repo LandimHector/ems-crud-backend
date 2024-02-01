@@ -2,7 +2,7 @@ package net.springboot.ems.controller;
 
 import lombok.AllArgsConstructor;
 import net.springboot.ems.dto.EmployeeDto;
-import net.springboot.ems.repository.EmployeeRepository;
+import net.springboot.ems.dto.ResultDto;
 import net.springboot.ems.service.EmployeeService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -49,11 +49,13 @@ public class EmployeeController {
 
     // Build Delete Employee REST API
     @DeleteMapping("{id}")
-    public ResponseEntity<String> deleteEmployee(@PathVariable("id") Long employeeId){
+    public ResponseEntity<ResultDto> deleteEmployee(@PathVariable("id") Long employeeId){
         employeeService.deleteEmployee(employeeId);
-        return ResponseEntity.ok("Employee deleted sucessfully!.");
+        return ResponseEntity.ok(new ResultDto("Employee deleted sucessfully!."));
     }
 
+
+    
 }
 
 

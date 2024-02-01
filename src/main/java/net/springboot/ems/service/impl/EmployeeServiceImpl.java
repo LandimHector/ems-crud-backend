@@ -7,7 +7,6 @@ import net.springboot.ems.exception.ResourceNotFoundException;
 import net.springboot.ems.mapper.EmployeeMapper;
 import net.springboot.ems.repository.EmployeeRepository;
 import net.springboot.ems.service.EmployeeService;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
